@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '@mui/material/Button';
 
+
 const backdrop = {
     visible: { opacity: 1},
     hidden: { opacity: 0}
@@ -19,9 +20,15 @@ const modal = {
     }
 }
 
+
+function refreshPage() {
+    window.location.reload(false);
+  }
+
+
 const Modal = ({ showModal, setShowModal }) => {
     return (
-        <AnimatePresence exitBeforeEnter onExitComplete={()=> setShowModal(false)}>
+        <AnimatePresence exitBeforeEnter >
             { showModal && (
                 <motion.div className='backdrop'
                 variants={backdrop}
@@ -30,12 +37,12 @@ const Modal = ({ showModal, setShowModal }) => {
                 exit="hidden"
                 >
                     <motion.div className='modal'
-                     variants={modal}
+                     variants={modal} onClick={()=> setShowModal(false)}
                      >
                     
                         <h2 style={{paddingBottom: '30px'}}>¡You won!</h2>
                      
-                       <Button className='button' variant="outlined" style={{color: "black"}} onClick={()=> setShowModal(false)}>Exit</Button>
+                       <Button className='button' variant="outlined" style={{color: "black"}} onClick={()=> refreshPage()}>Exit</Button>
 
                     </motion.div>
                 </motion.div>

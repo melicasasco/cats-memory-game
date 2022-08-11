@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Card from './Card';
+import Modal from './Modal';
 
 
 
@@ -113,7 +114,10 @@ function Cards({setShowModal}){
                 { items.map((item, index) => (
                    
                     <Card key={index} item={item} id={index} handleClick={handleClick} />
+                    
                 )) }
+
+            <Modal setItems={setItems} />
             </div>
         </>
     )
