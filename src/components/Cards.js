@@ -30,7 +30,7 @@ function Cards({setShowModal}){
     const [prev, setPrev] = useState(-1)
 
     function isGameFinished(element){
-        return element.stat == "correct"
+        return element.stat === "correct"
     }
 
     function check(current){

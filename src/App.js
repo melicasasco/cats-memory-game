@@ -1,8 +1,7 @@
 import Cards from "./components/Cards";
-import { react, useState} from 'react';
-import Button from '@mui/material/Button';
+import { useState } from 'react';
 import Modal from "./components/Modal";
-import { AnimatePresence } from 'framer-motion';
+
 
 
 function App() {
