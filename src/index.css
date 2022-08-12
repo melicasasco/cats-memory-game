@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -6,7 +7,8 @@ html, body{
   height: 100%;
 }
 body{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  font-family: 'Poppins';
   /* background: linear-gradient(220.55deg, #DD7BFF 0%, #FF6C6C 100%); */
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #8A88FB, #D079EE);
 	background-size: 400% 400%;
